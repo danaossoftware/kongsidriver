@@ -2,7 +2,8 @@
 include 'db.php';
 $lat = doubleval($_GET["lat"]);
 $lng = doubleval($_GET["lng"]);
-/*session_id("kongsicargo");
+session_id("kongsicargo");
 session_start();
-$userId = $_SESSION["kongsicargo_user_id"];*/
-$c->query("UPDATE drivers SET latitude=" . $lat . ", longitude=" . $lng . " WHERE id='5c73b1404d680'");
+$userId = $_SESSION["kongsicargo_user_id"];
+$c->query("UPDATE drivers SET latitude=" . $lat . ", longitude=" . $lng . " WHERE id='" . $userId . "'");
+echo $userId;
