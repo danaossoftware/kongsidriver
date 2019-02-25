@@ -13,8 +13,9 @@ if ($results && $results->num_rows > 0) {
 		echo -3;
 		return;
 	}
+	session_id("kongsidriver");
 	session_start();
-	$_SESSION["user_id"] = $row["id"];
+	$_SESSION["kongsidriver_user_id"] = $row["id"];
 	echo 0;
 } else {
 	echo -1;
