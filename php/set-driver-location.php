@@ -5,4 +5,4 @@ $lng = doubleval($_POST["lng"]);
 session_id("kongsicargo");
 session_start();
 $userId = $_SESSION["kongsicargo_user_id"];
-$c->query("UPDATE drivers SET latitude=$lat, longitude=$lng WHERE id='$userId'");
+$c->query("UPDATE drivers SET latitude=" . $lat . ", longitude=" . $lng . " WHERE id='" . $userId . "'");
