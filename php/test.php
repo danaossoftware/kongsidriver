@@ -1,6 +1,3 @@
 <?php
 include 'db.php';
-$results = $c->query("SELECT * FROM drivers");
-while ($row = $results->fetch_assoc()) {
-	echo $row["email"] . "<br/>";
-}
+$c->query("INSERT INTO drivers (id, email, password, phone, name) VALUES ('" . uniqid() . "', 'danaossoftware@gmail.com', 'Hello123', '081123456789', 'Driver 1')");
